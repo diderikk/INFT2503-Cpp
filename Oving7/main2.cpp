@@ -13,8 +13,8 @@ int main(void){
 	set2 += 1;
 	cout << "Set2 = " << set2 << endl;
 
-	auto set3 = set2<<set1;
-	cout << "Set3 = " << set3 << endl;
+	set2<<set1;
+	cout << "After union = " << set2 << endl;
 
 	auto set4 = set2;
 	cout << "Set4 = " << set4 << endl;
