@@ -13,7 +13,7 @@ int main(void){
 	set2 += 1;
 	cout << "Set2 = " << set2 << endl;
 
-	auto set3 = set2*set1;
+	auto set3 = set2<<set1;
 	cout << "Set3 = " << set3 << endl;
 
 	auto set4 = set2;

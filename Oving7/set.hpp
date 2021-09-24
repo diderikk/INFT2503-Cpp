@@ -11,7 +11,7 @@ class Set
 public:
 	vector<int> table;
 	Set();
-	Set operator*(const Set &other) const;
+	Set &operator<<(const Set &other);
 	Set &operator+=(int integer);
 	Set &operator=(const Set &set);
 	friend ostream &operator<<(ostream &os, const Set &set);
@@ -19,10 +19,9 @@ public:
 
 Set::Set(){}
 
-Set Set::operator*(const Set &other) const{
-	Set set = *this;
-	for(int integer : other.table) set+=integer;
-	return set;
+Set &Set::operator<<(const Set &other) {
+	for(int integer : other.table) *this+=integer;
+	return *this;
 }
 
 bool Set::number_exists(int integer) const{
